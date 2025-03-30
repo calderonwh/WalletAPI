@@ -1,13 +1,13 @@
-?? Documentaci¨®n de la API - WalletAPI
-?? Descripci¨®n
+ğŸ“Œ DocumentaciÃ³n de la API - WalletAPI
+ğŸ“– DescripciÃ³n
 La WalletAPI permite gestionar billeteras digitales, realizar transferencias de saldo y consultar transacciones.
 
-?? Endpoints Disponibles
-1?? Gesti¨®n de Billeteras (Wallets)
-?? Crear una billetera
+ğŸ”— Endpoints Disponibles
+1ï¸âƒ£ GestiÃ³n de Billeteras (Wallets)
+ğŸ“Œ Crear una billetera
 Endpoint: POST /api/wallets
 
-Descripci¨®n: Crea una nueva billetera con saldo inicial.
+DescripciÃ³n: Crea una nueva billetera con saldo inicial.
 
 Ejemplo de Request (JSON):
 
@@ -24,10 +24,10 @@ Respuesta esperada (201 Created):
   "balance": 100.00
 }
 
-?? Obtener todas las billeteras
+ğŸ“Œ Obtener todas las billeteras
 Endpoint: GET /api/wallets
 
-Descripci¨®n: Retorna una lista de todas las billeteras disponibles.
+DescripciÃ³n: Retorna una lista de todas las billeteras disponibles.
 
 Respuesta esperada (200 OK):
 
@@ -39,10 +39,10 @@ Respuesta esperada (200 OK):
   }
 ]
 
-?? Obtener una billetera por ID
+ğŸ“Œ Obtener una billetera por ID
 Endpoint: GET /api/wallets/{id}
 
-Descripci¨®n: Obtiene informaci¨®n de una billetera espec¨ªfica.
+DescripciÃ³n: Obtiene informaciÃ³n de una billetera especÃ­fica.
 
 Ejemplo de Respuesta (200 OK):
 
@@ -54,12 +54,12 @@ Ejemplo de Respuesta (200 OK):
 
 Errores posibles:
 
-404 Not Found ¡ú La billetera no existe.
+404 Not Found â†’ La billetera no existe.
 
-?? Actualizar el saldo de una billetera
+ğŸ“Œ Actualizar el saldo de una billetera
 Endpoint: PUT /api/wallets/{id}
 
-Descripci¨®n: Permite actualizar el saldo de una billetera.
+DescripciÃ³n: Permite actualizar el saldo de una billetera.
 
 Ejemplo de Request (JSON):
 
@@ -77,26 +77,26 @@ Respuesta esperada (200 OK):
 
 Errores posibles:
 
-400 Bad Request ¡ú Si el saldo es menor a 0.
+400 Bad Request â†’ Si el saldo es menor a 0.
 
-404 Not Found ¡ú Si la billetera no existe.
+404 Not Found â†’ Si la billetera no existe.
 
-?? Eliminar una billetera
+ğŸ“Œ Eliminar una billetera
 Endpoint: DELETE /api/wallets/{id}
 
-Descripci¨®n: Elimina una billetera de la base de datos.
+DescripciÃ³n: Elimina una billetera de la base de datos.
 
 Respuesta esperada (204 No Content)
 
 Errores posibles:
 
-404 Not Found ¡ú Si la billetera no existe.
+404 Not Found â†’ Si la billetera no existe.
 
-2?? Transferencias de Saldo
-?? Realizar una transferencia
+2ï¸âƒ£ Transferencias de Saldo
+ğŸ“Œ Realizar una transferencia
 Endpoint: POST /api/wallets/transfer
 
-Descripci¨®n: Transfiere saldo de una billetera a otra.
+DescripciÃ³n: Transfiere saldo de una billetera a otra.
 
 Ejemplo de Request (JSON):
 
@@ -114,17 +114,17 @@ Respuesta esperada (200 OK):
 
 Errores posibles:
 
-400 Bad Request ¡ú Si el monto es menor o igual a 0.
+400 Bad Request â†’ Si el monto es menor o igual a 0.
 
-400 Bad Request ¡ú Si la billetera de origen no tiene saldo suficiente.
+400 Bad Request â†’ Si la billetera de origen no tiene saldo suficiente.
 
-404 Not Found ¡ú Si alguna de las billeteras no exist
+404 Not Found â†’ Si alguna de las billeteras no exist
 
-3?? Transacciones
-?? Obtener transacciones de una billetera
+3ï¸âƒ£ Transacciones
+ğŸ“Œ Obtener transacciones de una billetera
 Endpoint: GET /api/wallets/{id}/transactions
 
-Descripci¨®n: Obtiene el historial de transacciones de una billetera.
+DescripciÃ³n: Obtiene el historial de transacciones de una billetera.
 
 Ejemplo de Respuesta (200 OK):
 
@@ -133,24 +133,24 @@ Ejemplo de Respuesta (200 OK):
     "id": 1,
     "walletId": 1,
     "amount": -50.00,
-    "type": "D¨¦bito",
+    "type": "DÃ©bito",
     "createdAt": "2024-03-29T10:00:00Z"
   },
   {
     "id": 2,
     "walletId": 2,
     "amount": 50.00,
-    "type": "Cr¨¦dito",
+    "type": "CrÃ©dito",
     "createdAt": "2024-03-29T10:00:01Z"
   }
 ]
 
 Errores posibles:
 
-404 Not Found ¡ú Si la billetera no existe.
+404 Not Found â†’ Si la billetera no existe.
 
-?? Configuraci¨®n y Uso
-?? Instalaci¨®n y Ejecuci¨®n
+âš™ï¸ ConfiguraciÃ³n y Uso
+ğŸš€ InstalaciÃ³n y EjecuciÃ³n
 Clonar el repositorio
 
 git clone https://github.com/calderonwh/WalletAPI.git
@@ -158,7 +158,7 @@ cd wallet-api
 
 Configurar la base de datos (SQL Server)
 
-Modificar el archivo appsettings.json con la cadena de conexi¨®n correcta.
+Modificar el archivo appsettings.json con la cadena de conexiÃ³n correcta.
 
 Ejecutar migraciones
 
@@ -172,7 +172,7 @@ Abrir en el navegador
 
 Acceder a Swagger: http://localhost:5144/swagger/index.html
 
-?? Tecnolog¨ªas Utilizadas
+ğŸ›  TecnologÃ­as Utilizadas
 .NET 8
 
 Entity Framework Core
@@ -181,9 +181,9 @@ SQL Server
 
 xUnit y Moq para pruebas unitarias
 
-WebApplicationFactory para pruebas de integraci¨®n
+WebApplicationFactory para pruebas de integraciÃ³n
 
-?? Notas Finales
+ğŸ“Œ Notas Finales
 La API incluye manejo de errores, asegurando que las respuestas sean claras.
 
-Se realizaron pruebas unitarias e integraci¨®n para garantizar la estabilidad del sistema.
+Se realizaron pruebas unitarias e integraciÃ³n para garantizar la estabilidad del sistema.
