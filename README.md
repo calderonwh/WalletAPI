@@ -50,7 +50,7 @@ Ejemplo de Respuesta (200 OK):
 }
 Errores posibles:
 
-404 Not Found → La billetera no existe.
+404 Not Found �?La billetera no existe.
 
 📌 Actualizar el saldo de una billetera
 Endpoint: PUT /api/wallets/{id}
@@ -71,9 +71,9 @@ Respuesta esperada (200 OK):
 }
 Errores posibles:
 
-400 Bad Request → Si el saldo es menor a 0.
+400 Bad Request �?Si el saldo es menor a 0.
 
-404 Not Found → Si la billetera no existe.
+404 Not Found �?Si la billetera no existe.
 
 📌 Eliminar una billetera
 Endpoint: DELETE /api/wallets/{id}
@@ -84,7 +84,7 @@ Respuesta esperada (204 No Content)
 
 Errores posibles:
 
-404 Not Found → Si la billetera no existe.
+404 Not Found �?Si la billetera no existe.
 
 2️⃣ Transferencias de Saldo
 📌 Realizar una transferencia
@@ -106,11 +106,11 @@ Respuesta esperada (200 OK):
 }
 Errores posibles:
 
-400 Bad Request → Si el monto es menor o igual a 0.
+400 Bad Request �?Si el monto es menor o igual a 0.
 
-400 Bad Request → Si la billetera de origen no tiene saldo suficiente.
+400 Bad Request �?Si la billetera de origen no tiene saldo suficiente.
 
-404 Not Found → Si alguna de las billeteras no existe.
+404 Not Found �?Si alguna de las billeteras no existe.
 
 3️⃣ Transacciones
 📌 Obtener transacciones de una billetera
@@ -138,13 +138,13 @@ Ejemplo de Respuesta (200 OK):
 ]
 Errores posibles:
 
-404 Not Found → Si la billetera no existe.
+404 Not Found �?Si la billetera no existe.
 
 ⚙️ Configuración y Uso
 🚀 Instalación y Ejecución
 Clonar el repositorio
 
-git clone https://github.com/tu-repositorio/wallet-api.git
+git clone https://github.com/calderonwh/WalletAPI.git
 cd wallet-api
 Configurar la base de datos (SQL Server)
 

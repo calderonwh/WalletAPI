@@ -7,7 +7,7 @@ namespace WalletAPI.Domain.Entities
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "El documento es obligatorio."), MaxLength(20)]
+        [Required(ErrorMessage = "El documento es obligatorio. "), MaxLength(20)]
         public string DocumentId { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "El nombre es obligatorio.")]
